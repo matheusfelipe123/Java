@@ -15,5 +15,5 @@ Esse repositorio sera utilizado para fins Educacionais é aprendizado de Java no
 - Multiplataforma
 
 
-![gif]([https://assets-v2.lottiefiles.com/a/62e02bc6-116f-11ee-aeb0-077c335b3c67/XpwfUikILP.gif](https://robertkaramagi.files.wordpress.com/2017/12/duke-v4.gif))
+![gif]((https://robertkaramagi.files.wordpress.com/2017/12/duke-v4.gif))
 
