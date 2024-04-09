@@ -15,5 +15,6 @@ Esse repositorio sera utilizado para fins Educacionais é aprendizado de Java no
 - Multiplataforma
 
 
-![gif]((https://robertkaramagi.files.wordpress.com/2017/12/duke-v4.gif))
+
+![gif](https://robertkaramagi.files.wordpress.com/2017/12/duke-v4.gif)
 
