@@ -29,3 +29,6 @@ while (peso > 0 && altura > 0) {
     peso = parseFloat(prompt("Digite seu Peso"));
     altura = parseFloat(prompt("Digite sua Altura"));
 }
+
+
+https://82ec94fa-53f0-40a1-ad33-79dfd30a81ba-00-2yvs7tv22byxm.worf.replit.dev
