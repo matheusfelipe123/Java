@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+
+
+<form id="livroForm">
+      <label for="titulo">Título:</label><br>
+      <input type="text" id="titulo" name="titulo" required><br><br>
+
+      <label for="autor">Autor:</label><br>
+      <input type="text" id="autor" name="autor" required><br><br>
+
+      <label for="preco">Preço:</label><br>
+      <input type="number" id="preco" name="preco" step="0.01" required><br><br>
+<label for="quantidade">Quantidade em Estoque:</label><br>
+      <input type="number" id="quantidade" name="quantidade" required><br><br>
+      
+      <button type="button" onclick="criarLivro()">Cadastrar Livro</button>
+    </form>
+  
+    <h2> Detalhes do Livro </h2>
+    
+    <div id="detalhesLivro"></div>
+<script>
+class Livro {
+      constructor(titulo, autor, preco, quantidadeEstoque) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.preco = preco;
+        this.quantidadeEstoque = quantidadeEstoque;
+      }
+
+      calcularValorEstoque() {
+        return this.preco * this.quantidadeEstoque;
+      }
+
+      verificarDisponibilidade() {
+        if (this.quantidadeEstoque > 0) {
+          return "Em estoque";
+        } else {
+          return "Esgotado";
+        }
+      }
+    }
+    function criarLivro(){
+      const titulo = document.getElementById('titulo').value
+      const autor = document.getElementById('autor').value
+      const preco = parseFloat(document.getElementById('preco').value)
+      const quantidadeEstoque = parseInt(document.getElementById('quantidade').value)
+      const livro = new Livro(titulo, autor,preco,quantidade)
+      const destalhesLivro = document.getElementById('detalhesLivro')
+          
+          detalhesLivro.innerHTML =   `<p><strong>Titulo:</strong> ${livro.titulo}</p>
+                                      <p><strong>Autor:</strong> ${livro.autor}</p>
+                                      <p><strong>Preco:</strong> ${livro.preco}</p>
+                                      <p><strong>QuantidadeEstoque:</strong> ${livro.quantidadeEstoque}</p>
+                                      <p><strong>calcularValorEstoque:</strong> ${livro.calcularValorEstoque()} </p>
+<p><strong>Disponibilidade:</strong> ${livro.verificarDisponibilidade()}</p>`
+      
+    }
+  </script>
+  </body>
+</html>
