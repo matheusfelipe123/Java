@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class SomaNumeros {
+    public static void main(String[] args) {
+        // Solicita o primeiro número
+        String numero1 = JOptionPane.showInputDialog("Digite o primeiro número:");
+        
+        // Solicita o segundo número
+        String numero2 = JOptionPane.showInputDialog("Digite o segundo número:");
+        
+        // Converte as entradas para double
+        double num1 = Double.parseDouble(numero1);
+        double num2 = Double.parseDouble(numero2);
+        
+        // Realiza a soma
+        double soma = num1 + num2;
+        
+        // Exibe o resultado
+        JOptionPane.showMessageDialog(null, "A soma dos números é: " + soma);
+    }
+}
