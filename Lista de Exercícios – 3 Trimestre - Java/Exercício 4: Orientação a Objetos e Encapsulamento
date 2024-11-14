@@ -1,0 +1,47 @@
+// Classe ContaBancaria com encapsulamento
+public class ContaBancaria {
+    // Atributo privado saldo
+    private double saldo;
+
+    // Método para depositar valor na conta
+    public void depositar(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+            System.out.println("Depósito de R$ " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
+    }
+
+    // Método para sacar valor da conta
+    public void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de R$ " + valor + " realizado com sucesso.");
+        } else {
+            System.out.println("Saldo insuficiente para o saque de R$ " + valor);
+        }
+    }
+
+    // Método para obter o saldo atual
+    public double getSaldo() {
+        return saldo;
+    }
+
+    // Método main para testar a classe ContaBancaria
+    public static void main(String[] args) {
+        // Criando um objeto da classe ContaBancaria
+        ContaBancaria conta = new ContaBancaria();
+
+        // Realizando depósitos
+        conta.depositar(500);
+        conta.depositar(200);
+
+        // Realizando saques
+        conta.sacar(300);
+        conta.sacar(600);
+
+        // Exibindo o saldo final
+        System.out.println("Saldo final da conta: R$ " + conta.getSaldo());
+    }
+}
